@@ -1,0 +1,95 @@
+body{
+    background-image: url("../assets/background_in_space.gif");
+    background-repeat: repeat;
+    background-position: auto;
+    margin: 0px;
+    font-family: "Montserrat", sans-serif;
+}
+
+/*HEADER SECTION*/
+header{
+    display: flex;
+    height: 50px;
+    width: 100%;
+    background-color: #ea8950;
+    align-items: center;
+}
+
+h1{
+    font-family: "Rubik", sans-serif;
+    font-weight: 400;
+    color: #262e38;
+}
+
+header svg{
+    margin: 0px 10px;
+}
+
+/*PRINCIPAL SECITON*/
+
+.main-contanier {
+    display: flex;
+    flex-wrap: wrap;
+}
+/* Text section */
+.grid-container{
+    display: grid;  
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    margin: 80px 50px;
+}
+
+.grid-item1 h2 {
+    font-family: "Handjet", sans-serif;
+    color: #ea8950;
+    font-weight: 300;
+    font-size: 50pt;
+    margin: 0px;
+}
+
+.grid-item1 p {
+    color: #DDE6ED;
+    position: relative; /* Asegurar que el texto tenga una posición relativa */
+    z-index: 1; /* Asegurar que el texto esté por encima de la imagen */
+}
+
+
+.rocketLogo {
+    position: absolute;
+    bottom: 25px;
+    height: 350px;
+    opacity: 0.5;
+    z-index: 0; /* Asegurar que la imagen esté por debajo del texto */
+}
+
+/* calculator section */ 
+.calculator {
+    display: flex;
+    height: 100%;
+    padding: 15px;
+    background-color: #ea8950;
+    border-radius: 20px;
+    box-shadow: 5px 5px 12px #9e9b9b; /* SombraDerecha - SombraInferior - Difuminacion*/
+}
+
+.display {
+
+}
+
+.calculator .button-panel {
+    display: grid;
+    grid-template-columns: minmax();
+}
+
+/*FOOTER SECTION*/
+footer {
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+}
+
+.social{
+    color: #ea8950;
+    text-align: center;
+    font-size: 8pt;
+}
