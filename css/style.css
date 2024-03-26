@@ -7,31 +7,32 @@ body{
 
 /*HEADER SECTION*/
     header{
-        display: flex;
+        display: flex;      /* Permite alinear el logo y el nombre principal */
         position: fixed;
         top: 0;
-        height: 50px;
-        width: 100%;
+        height: 50px;       /* Altura el header */
+        width: 100%;        /* Permite cubrir el 100% del ancho */
         background-color: #ea8950;
-        align-items: center;
+        align-items: center;            /* Permite alienar horizontalmente los items */
     }
 
     h1{
         font-family: "Rubik", sans-serif;
-        font-weight: 400;
+        font-weight: 400; /* Grosor de la fuente */
         color: #262e38;
     }
 
     header svg{
-        margin: 0 10px;
+        margin: 0 10px; /* margen del logo a la izquierda y derecha */
     }
 
 /*PRINCIPAL SECITON*/
+/* Contenedor principal del panel de texto y la calculadora*/
 .grid-container{
     display: grid;
-    grid-template-columns: 1fr minmax(300px, 680px); /* Define dos columnas */
-    gap: 80px;
-    margin: 120px 50px;
+    grid-template-columns: 1fr minmax(330px, 680px); /* Define dos columnas (columna de 1 fracción - tamaños min y max del contenedor) */
+    gap: 80px;      /*distancia entre Grid containers */
+    margin: 120px 50px 0 50px;
 }
 
     /* Text section */
@@ -49,23 +50,24 @@ body{
         z-index: 1; /* Asegurar que el texto esté por encima de la imagen */
     }
 
+    /* Imagen cohete */
     .rocketLogo {
-        position: absolute;
+        position: fixed;
         bottom: 25px;
         height: 350px;
         opacity: 0.5;
-        z-index: 0; /* Asegurar que la imagen esté por debajo del texto */
+        z-index: -1; /* Asegurar que la imagen esté por debajo del texto */
     }
 
     /* calculator section */
     .item2-calculator {   
-        padding-right: 50px;
         padding: 20px;
         background-color: #CED2DE;
         border-radius: 20px;
         box-shadow: 5px 5px 14px #000000; /* SombraDerecha - SombraInferior - Difuminacion*/
     }
 
+    /* Display de la calculadora */
     .item2-calculator .display {
         display: grid;
         grid: span 4;
@@ -79,17 +81,19 @@ body{
         font-family: "Montserrat", sans-serif;
         border-radius: 10px;
         border: none;
-        outline: none; 
-        box-shadow: inset -5px -5px 12px #ffffff,
-                    inset 5px 5px 12px rgba(0, 0, 0, 0.16);
+        outline: none;  /* quita la linea externa cuando se dijita en el display */
+        box-shadow: inset -5px -5px 12px #ffffff,               /* Sombra interna del panel derecha/inferior */
+                    inset 5px 5px 12px rgba(0, 0, 0, 0.16);     /* Sombra interna del panel izquierda/superior */
     }
 
+    /* Panel de botones calculadora */
     .item2-calculator .button-panel {
         display: grid;
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(4, 1fr);  /* cuatro columnas de 1 fracción  */
         margin-top:40px;
     }
 
+    /* Estilos generales botones calculadora */
     button {
         color: #262e38;
         border-radius: 30px;
@@ -98,8 +102,11 @@ body{
         padding: 15px;
         margin: 10px;
         box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.3); /* Agregar sombra al botón */
+                                                       /* abajo - derecha - degradé distancia / Color degradé y opacidad */
     }
 
+    /* Color y degradé de los botones especiales */
+    /* degraé desde la izquierda superior - los colores en orden van de derecha a izquierda */
     .button-panel .clear-btn{
         background: linear-gradient(to left top, #ff8f8f, #ff3535);
     }
@@ -113,7 +120,6 @@ body{
     }
 
     .button-panel .cero-btn {
-        display: grid;
         grid-column: span 2;
     }
 
@@ -121,11 +127,11 @@ body{
 footer {
     position: absolute;     
     bottom: 0;    
-    width: 100%;    
+    width: 100%;    /* Permite cubrir el 100% del ancho */
 }
-
-.social{
-    color: #ea8950;
-    text-align: center;
-    font-size: 8pt;
-}
+    /* Footer text */
+    .social{
+        color: #ea8950;
+        text-align: center;
+        font-size: 8pt;
+    }
