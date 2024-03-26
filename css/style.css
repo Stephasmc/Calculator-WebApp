@@ -1,91 +1,127 @@
 body{
-    background-image: url("../assets/background_in_space.gif");
-    background-repeat: repeat;
-    background-position: auto;
-    margin: 0px;
-    font-family: "Montserrat", sans-serif;
+    background-image: url("../assets/background_in_space.gif"); /* Imagen de fondo para la página */
+    background-position: top;
+    margin: 0;  /* Elimina las márgenes de la página */
+    font-family: "Montserrat", sans-serif;  /* Define la fuente principal de la página  */
 }
 
 /*HEADER SECTION*/
-header{
-    display: flex;
-    height: 50px;
-    width: 100%;
-    background-color: #ea8950;
-    align-items: center;
-}
+    header{
+        display: flex;
+        position: fixed;
+        top: 0;
+        height: 50px;
+        width: 100%;
+        background-color: #ea8950;
+        align-items: center;
+    }
 
-h1{
-    font-family: "Rubik", sans-serif;
-    font-weight: 400;
-    color: #262e38;
-}
+    h1{
+        font-family: "Rubik", sans-serif;
+        font-weight: 400;
+        color: #262e38;
+    }
 
-header svg{
-    margin: 0px 10px;
-}
+    header svg{
+        margin: 0 10px;
+    }
 
 /*PRINCIPAL SECITON*/
-
-.main-contanier {
-    display: flex;
-    flex-wrap: wrap;
-}
-/* Text section */
 .grid-container{
-    display: grid;  
-    grid-template-columns: 1fr 1fr;
-    gap: 80px;
-    margin: 80px 50px;
-}
-
-.grid-item1 h2 {
-    font-family: "Handjet", sans-serif;
-    color: #ea8950;
-    font-weight: 300;
-    font-size: 50pt;
-    margin: 0px;
-}
-
-.grid-item1 p {
-    color: #DDE6ED;
-    position: relative; /* Asegurar que el texto tenga una posición relativa */
-    z-index: 1; /* Asegurar que el texto esté por encima de la imagen */
-}
-
-
-.rocketLogo {
-    position: absolute;
-    bottom: 25px;
-    height: 350px;
-    opacity: 0.5;
-    z-index: 0; /* Asegurar que la imagen esté por debajo del texto */
-}
-
-/* calculator section */ 
-.calculator {
-    display: flex;
-    height: 100%;
-    padding: 15px;
-    background-color: #ea8950;
-    border-radius: 20px;
-    box-shadow: 5px 5px 12px #9e9b9b; /* SombraDerecha - SombraInferior - Difuminacion*/
-}
-
-.display {
-
-}
-
-.calculator .button-panel {
     display: grid;
-    grid-template-columns: minmax();
+    grid-template-columns: 1fr minmax(300px, 680px); /* Define dos columnas */
+    gap: 80px;
+    margin: 120px 50px;
 }
+
+    /* Text section */
+    h2 {
+        font-family: "Handjet", sans-serif;
+        color: #ea8950;
+        font-weight: 300;
+        font-size: 50pt;
+        margin: 0;
+    }
+
+    .item1-text p {
+        color: #DDE6ED;
+        position: relative; /* Asegurar que el texto tenga una posición relativa */
+        z-index: 1; /* Asegurar que el texto esté por encima de la imagen */
+    }
+
+    .rocketLogo {
+        position: absolute;
+        bottom: 25px;
+        height: 350px;
+        opacity: 0.5;
+        z-index: 0; /* Asegurar que la imagen esté por debajo del texto */
+    }
+
+    /* calculator section */
+    .item2-calculator {   
+        padding-right: 50px;
+        padding: 20px;
+        background-color: #CED2DE;
+        border-radius: 20px;
+        box-shadow: 5px 5px 14px #000000; /* SombraDerecha - SombraInferior - Difuminacion*/
+    }
+
+    .item2-calculator .display {
+        display: grid;
+        grid: span 4;
+        height: 60px;
+    }
+
+    input {
+        padding-right: 10px;
+        text-align: right;
+        font-size: 16pt;
+        font-family: "Montserrat", sans-serif;
+        border-radius: 10px;
+        border: none;
+        outline: none; 
+        box-shadow: inset -5px -5px 12px #ffffff,
+                    inset 5px 5px 12px rgba(0, 0, 0, 0.16);
+    }
+
+    .item2-calculator .button-panel {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        margin-top:40px;
+    }
+
+    button {
+        color: #262e38;
+        border-radius: 30px;
+        font-size: 12pt;
+        border: none;
+        padding: 15px;
+        margin: 10px;
+        box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.3); /* Agregar sombra al botón */
+    }
+
+    .button-panel .clear-btn{
+        background: linear-gradient(to left top, #ff8f8f, #ff3535);
+    }
+
+    .button-panel .gray-btn {
+        background: linear-gradient(to left top, #C5CEDF, #A0ADC4);
+    }
+
+    .button-panel .orange-btn {
+        background: linear-gradient(to left top, #ffaf40, #ff8c00);
+    }
+
+    .button-panel .cero-btn {
+        display: grid;
+        grid-column: span 2;
+    }
 
 /*FOOTER SECTION*/
 footer {
-    position: fixed;
-    bottom: 0px;
-    width: 100%;
+    position: absolute;     
+    bottom: 0;    
+    width: 100%;    
 }
 
 .social{
