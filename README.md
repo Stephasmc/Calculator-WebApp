@@ -20,7 +20,7 @@ _Inserta aquí algunas capturas de pantalla de tu calculadora en acción, mostra
 ## Cómo Usar
 
 1. Abre el archivo `index.html` en tu navegador web.
-2. Ingresa los números y operadores utilizando los botones de la calculadora o directamente desde tu teclado.
+2. Ingresa los números y operadores utilizando los botones de la calculadora.
 3. Presiona el botón de igual (=) para obtener el resultado.
 4. Utiliza el botón de limpiar (C) para borrar la operación actual y comenzar de nuevo.
 
@@ -32,7 +32,7 @@ _Inserta aquí algunas capturas de pantalla de tu calculadora en acción, mostra
 
 ## Créditos
 
-- Desarrollado por [Tu Nombre o Nombre del Equipo]
+- Desarrollado por Stephania Millán Castellón.
 - Iconos proporcionados por [FontAwesome](https://fontawesome.com/)
 
 ## Contribuir
@@ -42,10 +42,6 @@ Si deseas contribuir al desarrollo de AstroMath, ¡no dudes en hacerlo! Puedes c
 ## Licencia
 
 Este proyecto está bajo la Licencia MIT. Para más detalles, consulta el archivo [LICENSE.md](LICENSE.md).
-
-## Contacto
-
-Si tienes alguna pregunta o sugerencia, no dudes en ponerte en contacto con nosotros a través de [correo electrónico](mailto:tuemail@example.com).
 
 ---
 
