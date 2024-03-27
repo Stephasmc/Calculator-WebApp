@@ -68,10 +68,11 @@ body{
     }
 
     /* Display de la calculadora */
-    .item2-calculator .display {
+    .item2-calculator .displayContaier {
         display: grid;
         grid: span 4;
         height: 60px;
+        overflow: auto; /* Agregar overflow: auto; para habilitar la barra de desplazamiento en caso de que el contenido sea demasiado grande */
     }
 
     input {
@@ -101,6 +102,8 @@ body{
         border: none;
         padding: 15px;
         margin: 10px;
+        cursor: url("/Calculator-WebApp/assets/pointer-32.png"), auto;   /* cambiar el cursos cuando se pone en los botones */
+                                                                         /* el AUTO deja el por defecto si no se encuentra el personalizado */
         box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.3); /* Agregar sombra al botón */
                                                        /* abajo - derecha - degradé distancia / Color degradé y opacidad */
     }
@@ -121,6 +124,24 @@ body{
 
     .button-panel .cero-btn {
         grid-column: span 2;
+    }
+
+
+    /* Efecto HOVER al pasar el cursor encima de un boton */
+    button:hover {
+        background-color: #e2b7b7;
+        }
+
+    .button-panel .clear-btn:hover {
+        background: linear-gradient(to left top, #ffb4b4, #ff8f8f);
+    }
+
+    .button-panel .gray-btn:hover {
+        background: linear-gradient(to left top, #cdd6e7, #b0bdd4);
+    }
+
+    .button-panel .orange-btn:hover {
+        background: linear-gradient(to left top, #ffcf84, #ffaf40);
     }
 
 /*FOOTER SECTION*/

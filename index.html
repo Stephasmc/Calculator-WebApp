@@ -45,27 +45,27 @@
 
             <!-- Calculator Panel -->
             <div class="item2-calculator">
-                <div class="display"><input type="text" placeholder="Ingrese la operacion"></div>
+                <div class="displayContaier"><input id="display" type="text" placeholder="Ingrese la operacion" readonly></div>
                 <div class="button-panel">
-                    <button class="clear-btn">C</button>
-                    <button class="gray-btn">( )</button>
-                    <button class="gray-btn">%</button>
-                    <button class="orange-btn">/</button>
-                    <button>7</button>
-                    <button>8</button>
-                    <button>9</button>
-                    <button class="orange-btn">X</button>
-                    <button>4</button>
-                    <button>5</button>
-                    <button>6</button>
-                    <button class="orange-btn">-</button>
-                    <button>1</button>
-                    <button>2</button>
-                    <button>3</button>
-                    <button class="orange-btn">+</button>
-                    <button class="cero-btn">0</button>
-                    <button>.</button>
-                    <button class="orange-btn">=</button>
+                    <button onclick="clearDisplay()" class="clear-btn">C</button>
+                    <button onclick="addValueDisplay('(')" class="gray-btn">(</button>
+                    <button onclick="addValueDisplay(')')" class="gray-btn">)</button>
+                    <button onclick="addValueDisplay('/')" class="orange-btn">/</button>
+                    <button onclick="addValueDisplay('7')">7</button>
+                    <button onclick="addValueDisplay('8')">8</button>
+                    <button onclick="addValueDisplay('9')">9</button>
+                    <button onclick="addValueDisplay('*')" class="orange-btn">X</button>
+                    <button onclick="addValueDisplay('4')">4</button>
+                    <button onclick="addValueDisplay('5')">5</button>
+                    <button onclick="addValueDisplay('6')">6</button>
+                    <button onclick="addValueDisplay('-')" class="orange-btn">-</button>
+                    <button onclick="addValueDisplay('1')">1</button>
+                    <button onclick="addValueDisplay('2')">2</button>
+                    <button onclick="addValueDisplay('3')">3</button>
+                    <button onclick="addValueDisplay('+')" class="orange-btn">+</button>
+                    <button onclick="addValueDisplay('0')" class="cero-btn">0</button>
+                    <button onclick="">.</button>
+                    <button onclick="calculateResult()" class="orange-btn">=</button>
                 </div>
             </div>
         </div>
